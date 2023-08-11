@@ -18,13 +18,13 @@ RUN apk add --no-cache --virtual .build-deps \
         libzip-dev \
         git \
         go \
-# Утилита "protoc" и официальный плагин генерации клиентского кода "grpc_php_plugin"
+    # Утилита "protoc" и официальный плагин генерации клиентского кода "grpc_php_plugin"
     && mkdir /build && cd /build \
     && git clone --recursive -b v1.27.x https://github.com/grpc/grpc \
     && mkdir -p /build/grpc/cmake/build && cd /build/grpc/cmake/build \
     && cmake ../.. \
     && make protoc grpc_php_plugin \
-# Плагин генерации серверного кода "protoc-gen-php-grpc" от roadrunner
+    # Плагин генерации серверного кода "protoc-gen-php-grpc" от roadrunner
     && cd /build \
     && composer create-project --ignore-platform-reqs spiral/roadrunner-cli \
     && chmod +x ./roadrunner-cli/bin/rr \
