@@ -17,7 +17,7 @@ jobs:
         run: docker build -t docker.pkg.github.com/igancev/protoc-php-plugins:latest .
 
       - name: Login to GitHub Docker Registry
-        run: docker login docker.pkg.github.com -u ${{ secrets.DOCKER_TOKEN }} -p ${GITHUB_TOKEN}
+        run: docker login docker.pkg.github.com -u ${{ secrets.DOCKER_TOKEN }} -p ${{ secrets.GITHUB_TOKEN }}
 
       - name: Push Docker Image
         run: docker push docker.pkg.github.com/igancev/protoc-php-plugins:latest
