@@ -14,10 +14,10 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build Docker Image
-        run: docker build -t docker.pkg.github.com/igancev/protoc-php-plugins/protoc-php-plugins:latest .
+        run: docker build -t ghcr.io/igancev/protoc-php-plugins/protoc-php-plugins:latest .
 
       - name: Login to GitHub Docker Registry
-        run: docker login docker.pkg.github.com -u ${{ secrets.DOCKER_TOKEN }} -p ${{ secrets.GITHUB_TOKEN }}
+        run: docker login ghcr.io -u ${{ secrets.DOCKER_TOKEN }} -p ${{ secrets.GITHUB_TOKEN }}
 
       - name: Push Docker Image
-        run: docker push docker.pkg.github.com/igancev/protoc-php-plugins/protoc-php-plugins:latest
+        run: docker push ghcr.io/igancev/protoc-php-plugins/protoc-php-plugins:latest
