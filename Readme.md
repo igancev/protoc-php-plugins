@@ -1,13 +1,13 @@
 # protoc-php-plugins
 
-Docker image with compiled binary protoc, grpc_php_plugin and downloaded protoc-gen-php-grpc
-(plugin by Roadrunner project)
+Docker image with compiled binary `protoc`, `grpc_php_plugin` and downloaded `protoc-gen-php-grpc`
+(plugin by [Roadrunner](https://roadrunner.dev/docs/plugins-grpc/current/en))
 
 Image based on `php:8.2-cli-alpine3.18`, and contains:
 
 - `protoc`
 - `/usr/bin/protoc-gen-php-grpc` - plugin by [Roadrunner](https://roadrunner.dev/docs/plugins-grpc/current/en) project
-- `/usr/bin/grpc_php_plugin` - official plugin, compiled from sources
+- `/usr/bin/grpc_php_plugin` - official plugin, [compiled from sources](https://grpc.io/docs/languages/php/basics/#setup)
 
 ## Usage
 
